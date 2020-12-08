@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard!</title>
+</head>
+<script src="https://use.fontawesome.com/bec0d899fe.js"></script>
+
+<body>
+    <header class="float-left mt-5 ml-5 col-12">
+        <h1><img src="noun_weather_1733227.svg" height=62>Weather Dashboard</h1>
+        <p class="lead">A minimal weather dashboard to plan your trip</p>
+    </header>
+
+    <section class="container sm-12 md-col-12 float-left m-5" id="main-container">
+        <section class="row align-items-start">
+            <section class="sidebar text-left col-4">
+                <h2>Search for a City:</h2>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control form-control-sm" type="search" placeholder="City Name or Zip"
+                        aria-label="Search">
+                    <button class="btn btn-outline-dark btn-sm" type="submit">Search</button>
+
+                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vero at temporibus
+                        facilis amet
+                        minus, consequatur repellendus sint quis aperiam, neque placeat. In et minus ab commodi
+                        repellendus officia quasi?</p>
+
+            </section>
+            <section id="weather-main" class="text-left col-8">
+                <h2 class="todaysForecast">Today's Forecast</h2>
+                <p>Temperature:</p>
+                <p>Humidity:</p>
+                <p>Wind Speed:</p>
+                <p>UV Index:</p>
+                <h2 class="5dayForecast mb-2">5 Day Forecast</h2>
+                <div class="container">
+                    <div class="row justify-content-left">
+                        <div class="card mb-3" style="max-width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 1</h5>
+                                <p class="card-text">Temp:</p>
+                                <p class="card-text">Humidity:</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="max-width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 2</h5>
+                                <p class="card-text">Temp:</p>
+                                <p class="card-text">Humidity:</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="max-width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 3</h5>
+                                <p class="card-text">Temp:</p>
+                                <p class="card-text">Humidity:</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="max-width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 4</h5>
+                                <p class="card-text">Temp:</p>
+                                <p class="card-text">Humidity:</p>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="max-width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 5</h5>
+                                <p class="card-text">Temp:</p>
+                                <p class="card-text">Humidity:</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <script src="script.js" lang="text/javascript">
+    </script>
+</body>
+
+</html>

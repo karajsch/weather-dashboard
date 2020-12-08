@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+a:link {
+    color: #666;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #666;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:active {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 62px;
+    font-style: italic;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 21px;
+    font-style: italic;
+    padding-top: 30px;
+}
+
+#main-container {
+    border-radius: 10px;
+    border: 1px solid #666;
+    display: flex;
+}
+
+.card {
+    margin-right: 3%;
+}
