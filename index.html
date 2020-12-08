@@ -14,12 +14,12 @@
 <script src="https://use.fontawesome.com/bec0d899fe.js"></script>
 
 <body>
-    <header class="float-left col-12">
-        <h1><img src="noun_weather_1733227.svg" height=62>Weather Dashboard</h1>
+    <header class="text-center col-12">
+        <h1>Weather Dashboard</h1>
         <p class="lead">A minimal weather dashboard to plan your trip</p>
     </header>
 
-    <section class="container col-11 float-left" id="main-container">
+    <section class="container-fluid col-11 justify-content-center" id="main-container">
         <section class="row align-items-start">
             <section class="sidebar text-left col-3">
                 <h2>Search for a City:</h2>
@@ -37,17 +37,28 @@
             <section class="col-1"></section>
             <section id="weather-main" class="text-left col-8">
                 <h2 class="todaysForecast">Today's Forecast</h2>
-                <div id="weather">
-                    <div id="description"></div>
-                    <h1 id="temp"></h1>
-                    <div id="location"></div>
-                </div>
-                <h2 class="5dayForecast mb-2">5 Day Forecast</h2>
-                <div class="container">
+                <div id="location"></div>
+                <section class="row">
+                    <section class="col-2 align-top">
+                        <div id="weather">
+                            <img src="rns-weather-icons/SVG/weather_icons-01.svg" height="100" class="align-top">
+                    </section>
+                    <section class="col-10 align-top text-left">
+                        <h1 id="temp"></h1>
+                        <div id="description"></div>
+
+                        </div>
+                    </section>
+                </section>
+
+
+                <h2 class="5dayForecast mb-2">5-Day Forecast</h2>
+                <div class="container-fluid">
                     <div class="row justify-content-left">
                         <div class="card mb-3" style="max-width: 10rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 1</h5>
+                                <img src="rns-weather-icons/SVG/weather_icons-17.svg" height="100" class="float-left">
                                 <p class="card-text">Temp: 72 F</p>
                                 <p class="card-text">Humidity: 40%</p>
                             </div>
@@ -55,6 +66,7 @@
                         <div class="card mb-3" style="max-width: 10rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 2</h5>
+                                <img src="rns-weather-icons/SVG/weather_icons-01.svg" height="100" class="float-left">
                                 <p class="card-text">Temp: 72 F</p>
                                 <p class="card-text">Humidity: 40%</p>
                             </div>
@@ -62,6 +74,7 @@
                         <div class="card mb-3" style="max-width: 10rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 3</h5>
+                                <img src="rns-weather-icons/SVG/weather_icons-16.svg" height="100" class="float-left">
                                 <p class="card-text">Temp: 72 F</p>
                                 <p class="card-text">Humidity: 40%</p>
                             </div>
@@ -69,6 +82,7 @@
                         <div class="card mb-3" style="max-width: 10rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 4</h5>
+                                <img src="rns-weather-icons/SVG/weather_icons-19.svg" height="100" class="float-left">
                                 <p class="card-text">Temp: 72 F</p>
                                 <p class="card-text">Humidity: 40%</p>
                             </div>
@@ -76,6 +90,7 @@
                         <div class="card mb-3" style="max-width: 10rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Day 5</h5>
+                                <img src="rns-weather-icons/SVG/weather_icons-31.svg" height="100" class="float-left">
                                 <p class="card-text">Temp: 72 F</p>
                                 <p class="card-text">Humidity: 40%</p>
                             </div>

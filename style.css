@@ -55,3 +55,7 @@ h2 {
 .card-text {
     text-align: left;
 }
+
+#main-weather-icon {
+    image-orientation: left;
+}
