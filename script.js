@@ -32,7 +32,7 @@ function get_icon_url(weather) {
 }
 
 function getFiveDay(city) {
-    $(".forecast").empty()
+
     $.get(`https://api.opencagedata.com/geocode/v1/json?q=${city}&key=4d698eb6c6464d1bba5e19d866c9950f`, (data) => {
         console.log(data)
         let result = data.results[0]
@@ -82,7 +82,7 @@ function loadPastButtons() {
 $(document).ready(() => {
     let city = "Philadelphia"
     weatherBalloon(city);
-    getFiveDay(city)
+    //getFiveDay(city)
     loadPastButtons()
 
     $(document).on("click", "button.city_button", () => {
