@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <title>Weather Dashboard!</title>
+    <title>Weather Dash</title>
 
 
     </script>
@@ -26,39 +26,37 @@
 
 <body>
     <header class="text-center col-12">
-        <h1>Weather Dashboard</h1>
+        <h1 class="title">Weather<span class="title2">Dash</span></h1>
         <p class="lead">A minimal weather dashboard to plan your trip</p>
     </header>
 
     <section class="container-fluid col-11 justify-content-center" id="main-container">
         <section class="row align-items-start">
-            <section class="sidebar text-left col-3">
+            <section class="sidebar text-left col-2 float-left">
                 <h2>Search for a City:</h2>
-                <form class="form-inline my-2 my-lg-0 pb-3">
+                <form class="form-inline pb-2">
                     <input class="form-control form-control-sm" type="search" placeholder="City Name"
                         aria-label="Search" id="citySearch">
                     <button class="btn btn-outline-dark btn-sm" type="submit" id="searchBtn">Search</button>
                 </form>
-                <div id="buttons_past" class="tm-4"></div>
-                <p class="pt-4">Weather icons designed by <br> <a href="http://www.rnsfonts.com/" target="_new">Yorlmar
+                <div id="buttons_past" class="tm-2"></div>
+                <p class="pt-4">Weather icons designed by <a href="http://www.rnsfonts.com/" target="_new">Yorlmar
                         Campos</a></p>
-                <p>Weather data from <a href="https://home.openweathermap.org/">Open Weather Map</a> and <a
-                        href="https://opencagedata.com/">OpenCage</a></p>
+                <p><a href="https://fonts.google.com/specimen/Proza+Libre" target="_new">Proza Libre</a> font designed
+                    by Jasper de Waard</p>
+                <p>Weather data from <a href="https://home.openweathermap.org/" target="_new">Open Weather Map</a> and
+                    <a href="https://opencagedata.com/" target="_new">OpenCage</a></p>
 
             </section>
             <section class="col-1"></section>
-            <section id="weather-main" class="text-left col-8">
+            <section id="weather-main" class="text-left col-9">
                 <h2 class="todaysForecast">Today's Forecast</h2>
                 <section class="row">
-                    <section class="col-3 align-top" id="todaysForecast">
-                    </section>
-                    <section class="col-2 align-top">
+                    <section class="col-12 align-top" id="todaysForecast">
                         <div id="weather">
-                            <h2 id="location">
-                            </h2>
-                            <section class="col-4 align-top text-left">
-                                <h1 id="temp"></h1>
-                                <div id="description"></div>
+                            <h2 id="location"><i class="fa fa-map-marker" aria-hidden="true"></i></h2>
+                            <h1 id="temp"></h1>
+                            <div id="description"></div>
 
                         </div>
                     </section>
@@ -66,10 +64,7 @@
 
 
                 <h2 class="5dayForecast mb-2">5-Day Forecast</h2>
-                <div class="container-fluid">
-                    <div class="row justify-content-left forecast"></div>
-                </div>
-                </div>
+                <div class="row justify-content-left forecast"></div>
             </section>
         </section>
     </section>

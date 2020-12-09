@@ -31,15 +31,31 @@ a:active {
 }
 
 h1 {
+    color: #333;
     font-size: 62px;
     font-style: italic;
     letter-spacing: -2px;
 }
 
 h2 {
+    color: #333;
     font-size: 21px;
     font-style: italic;
     padding-top: 30px;
+}
+
+.title {
+    color: #333;
+    font-size: 62px;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.title .title2 {
+    color: #333;
+    font-size: 62px;
+    font-style: normal;
+    letter-spacing: normal;
 }
 
 #main-container {
@@ -60,4 +76,5 @@ h2 {
     color: #666;
     font-style: italic;
     font-size: 16px;
+    line-height: 18px;
 }
