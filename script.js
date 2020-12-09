@@ -23,7 +23,7 @@ function get_icon_url(weather) {
         case "sun":
             return "rns-weather-icons/SVG/weather_icons-01.svg"
         case "rain":
-            return "ns-weather-icons/SVG/weather_icons-19.svg"
+            return "rns-weather-icons/SVG/weather_icons-19.svg"
         case "clouds":
             return "rns-weather-icons/SVG/weather_icons-17.svg"
         default:
@@ -39,6 +39,7 @@ function getFiveDay(city) {
         $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${result.geometry.lat}&lon=${result.geometry.lng}&units=imperial&exclude=hourly,minutely,current,alerts&appid=${key}`, (result_city) => {
             let forecast = result_city.daily;
             console.log(forecast)
+            $(".forecast").html("");
             forecast.slice(0, 5).forEach((day, index) => {
                 $(".forecast").append(`<div class="card mb-3" style="max-width: 10rem;">
                 <div class="card-body">
