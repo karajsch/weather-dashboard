@@ -8,25 +8,25 @@ body {
 
 a:link {
     color: #666;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: underline;
 }
 
 a:visited {
     color: #666;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: underline;
 }
 
 a:hover {
     color: black;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: underline;
 }
 
 a:active {
     color: black;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: underline;
 }
 
@@ -56,6 +56,8 @@ h2 {
     text-align: left;
 }
 
-#main-weather-icon {
-    image-orientation: left;
+#buttons_past {
+    color: #666;
+    font-style: italic;
+    font-size: 16px;
 }

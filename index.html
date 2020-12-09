@@ -5,13 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Weather Dashboard!</title>
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    </script>
 </head>
-<script src="https://use.fontawesome.com/bec0d899fe.js"></script>
+<script src="https://kit.fontawesome.com/5cf7903657.js" crossorigin="anonymous"></script>
 
 <body>
     <header class="text-center col-12">
@@ -23,29 +34,31 @@
         <section class="row align-items-start">
             <section class="sidebar text-left col-3">
                 <h2>Search for a City:</h2>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control form-control-sm" type="search" placeholder="City Name or Zip"
-                        aria-label="Search">
-                    <button class="btn btn-outline-dark btn-sm" type="submit">Search</button>
-
-                    <p class="pt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vero at temporibus
-                        facilis amet
-                        minus, consequatur repellendus sint quis aperiam, neque placeat. In et minus ab commodi
-                        repellendus officia quasi?</p>
+                <form class="form-inline my-2 my-lg-0 pb-3">
+                    <input class="form-control form-control-sm" type="search" placeholder="City Name"
+                        aria-label="Search" id="citySearch">
+                    <button class="btn btn-outline-dark btn-sm" type="submit" id="searchBtn">Search</button>
+                </form>
+                <div id="buttons_past" class="tm-4"></div>
+                <p class="pt-4">Weather icons designed by <br> <a href="http://www.rnsfonts.com/" target="_new">Yorlmar
+                        Campos</a></p>
+                <p>Weather data from <a href="https://home.openweathermap.org/">Open Weather Map</a> and <a
+                        href="https://opencagedata.com/">OpenCage</a></p>
 
             </section>
             <section class="col-1"></section>
-            <section id="weather-main" class="text-left col-8">
+            <section id="forecastToday" class="text-left col-8">
                 <h2 class="todaysForecast">Today's Forecast</h2>
-                <div id="location"></div>
                 <section class="row">
+                    <section class="col-3 align-top" id="todaysForecast">
+                    </section>
                     <section class="col-2 align-top">
                         <div id="weather">
-                            <img src="rns-weather-icons/SVG/weather_icons-01.svg" height="100" class="align-top">
-                    </section>
-                    <section class="col-10 align-top text-left">
-                        <h1 id="temp"></h1>
-                        <div id="description"></div>
+                            <h2 id="location">
+                            </h2>
+                            <section class="col-4 align-top text-left">
+                                <h1 id="temp"></h1>
+                                <div id="description"></div>
 
                         </div>
                     </section>
@@ -54,49 +67,10 @@
 
                 <h2 class="5dayForecast mb-2">5-Day Forecast</h2>
                 <div class="container-fluid">
-                    <div class="row justify-content-left">
-                        <div class="card mb-3" style="max-width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Day 1</h5>
-                                <img src="rns-weather-icons/SVG/weather_icons-17.svg" height="100" class="float-left">
-                                <p class="card-text">Temp: 72 F</p>
-                                <p class="card-text">Humidity: 40%</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Day 2</h5>
-                                <img src="rns-weather-icons/SVG/weather_icons-01.svg" height="100" class="float-left">
-                                <p class="card-text">Temp: 72 F</p>
-                                <p class="card-text">Humidity: 40%</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Day 3</h5>
-                                <img src="rns-weather-icons/SVG/weather_icons-16.svg" height="100" class="float-left">
-                                <p class="card-text">Temp: 72 F</p>
-                                <p class="card-text">Humidity: 40%</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Day 4</h5>
-                                <img src="rns-weather-icons/SVG/weather_icons-19.svg" height="100" class="float-left">
-                                <p class="card-text">Temp: 72 F</p>
-                                <p class="card-text">Humidity: 40%</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Day 5</h5>
-                                <img src="rns-weather-icons/SVG/weather_icons-31.svg" height="100" class="float-left">
-                                <p class="card-text">Temp: 72 F</p>
-                                <p class="card-text">Humidity: 40%</p>
-                            </div>
-                        </div>
+                    <div class="row justify-content-left forecast">
 
                     </div>
+                </div>
                 </div>
             </section>
         </section>
