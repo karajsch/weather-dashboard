@@ -44,7 +44,7 @@ function getFiveDay(city) {
                 $(".forecast").append(`<div class="card mb-3" style="max-width: 10rem;">
                 <div class="card-body">
                     <h5 class="card-title">Day ${index + 1}</h5>
-                    <img src=${get_icon_url(day.weather[0].main.toLowerCase())} height="100" class="float-left">
+                    <img src=${get_icon_url(day.weather[0].main.toLowerCase())} height="100">
                     <p>${day.weather[0].description}</p>
                     <p class="card-text">Temp: ${~~day.temp.day} F</p>
                     <p class="card-text">Humidity: ${day.humidity}%</p>
@@ -113,4 +113,5 @@ function drawWeather(d) {
     document.getElementById('description').innerHTML = d.weather[0].description;
     document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
     document.getElementById('location').innerHTML = d.name;
+
 }
