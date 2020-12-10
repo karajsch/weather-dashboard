@@ -52,12 +52,12 @@
             <section id="weather-main" class="text-left col-9">
                 <h2 class="todaysForecast">Today's Forecast</h2>
                 <section class="row">
-                    <section class="col-12 align-top" id="todaysForecast">
+                    <section class="col-12 align-top">
                         <div id="weather">
-                            <h2 id="location"><i class="fa fa-map-marker" aria-hidden="true"></i></h2>
+                            <h2 id="location"></h2>
                             <h1 id="temp"></h1>
                             <div id="description"></div>
-                            <img src=${get_icon_url(day.weather[0].main.toLowerCase())} height="100">
+                            <img id="todaysWeather" height="100">
                         </div>
                     </section>
                 </section>

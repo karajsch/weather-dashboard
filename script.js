@@ -113,5 +113,6 @@ function drawWeather(d) {
     document.getElementById('description').innerHTML = d.weather[0].description;
     document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
     document.getElementById('location').innerHTML = d.name;
+    document.getElementById('todaysWeather').innerHTML = d.weather[0].main;
 
 }
