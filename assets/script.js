@@ -74,7 +74,6 @@ function loadPastButtons() {
     localStorage.getItem("searches")
     if (localStorage.getItem("searches")) {
         var buttons = JSON.parse(localStorage.getItem("searches"))
-        document.getElementById("#buttons_past").addEventListener("click", loadPastButtons)
         buttons.forEach((city) => {
             $("#buttons_past").append(`<button onClick=weatherBalloon(${city}) class="city_button m-1">${city}</button>`)
         })
