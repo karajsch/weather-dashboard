@@ -72,9 +72,15 @@ h2 {
     text-align: left;
 }
 
-#buttons_past {
+#buttons_past,
+.city_button {
     color: #666;
     font-style: italic;
     font-size: 16px;
     line-height: 18px;
+    border: 0px;
+}
+
+#description {
+    text-transform: capitalize;
 }

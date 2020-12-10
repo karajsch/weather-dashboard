@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Weather Dash</title>
 
 
@@ -54,10 +54,14 @@
                 <section class="row">
                     <section class="col-12 align-top">
                         <div id="weather">
+                            <img id="todaysWeather" height="150" class="float-left align-top mt-5">
                             <h2 id="location"></h2>
-                            <h1 id="temp"></h1>
-                            <div id="description"></div>
-                            <img id="todaysWeather" height="100">
+                            <div id="description" class="pl-3"></div>
+                            <h1 id="temp" class="pb-6"></h1>
+                            <p></p>
+                            <div id="humidity" class="mt-5 ml-4"></div>
+                            <div id="windspeed" class="ml-4"></div>
+                        </div>
                         </div>
                     </section>
                 </section>
@@ -72,7 +76,7 @@
 
     </section>
 
-    <script src="script.js" lang="text/javascript">
+    <script src="assets/script.js" lang="text/javascript">
     </script>
 </body>
 

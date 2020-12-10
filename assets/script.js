@@ -19,15 +19,15 @@ function weatherBalloon(city) {
 function get_icon_url(weather) {
     switch (weather) {
         case "snow":
-            return "rns-weather-icons/SVG/weather_icons-31.svg"
+            return "assets/rns-weather-icons/SVG/weather_icons-31.svg"
         case "sun":
-            return "rns-weather-icons/SVG/weather_icons-01.svg"
+            return "assets/rns-weather-icons/SVG/weather_icons-01.svg"
         case "rain":
-            return "rns-weather-icons/SVG/weather_icons-19.svg"
+            return "assets/rns-weather-icons/SVG/weather_icons-19.svg"
         case "clouds":
-            return "rns-weather-icons/SVG/weather_icons-17.svg"
+            return "assets/rns-weather-icons/SVG/weather_icons-17.svg"
         default:
-            return "rns-weather-icons/SVG/weather_icons-01.svg"
+            return "assets/rns-weather-icons/SVG/weather_icons-01.svg"
     }
 }
 
@@ -45,7 +45,7 @@ function getFiveDay(city) {
                 <div class="card-body">
                     <h5 class="card-title">Day ${index + 1}</h5>
                     <img src=${get_icon_url(day.weather[0].main.toLowerCase())} height="100">
-                    <p>${day.weather[0].description}</p>
+                    <p style="text-transform: capitalize;">${day.weather[0].description}</p>
                     <p class="card-text">Temp: ${~~day.temp.day} F</p>
                     <p class="card-text">Humidity: ${day.humidity}%</p>
                 </div>
@@ -74,11 +74,14 @@ function loadPastButtons() {
     localStorage.getItem("searches")
     if (localStorage.getItem("searches")) {
         var buttons = JSON.parse(localStorage.getItem("searches"))
+        document.getElementById("#buttons_past").addEventListener("click", loadPastButtons)
         buttons.forEach((city) => {
-            $("#buttons_past").append(`<p onClick=weatherBalloon(${city}) class="city_button">${city}</p>`)
+            $("#buttons_past").append(`<button onClick=weatherBalloon(${city}) class="city_button m-1">${city}</button>`)
         })
     }
 }
+
+
 
 $(document).ready(() => {
     let city = "Philadelphia"
@@ -113,6 +116,8 @@ function drawWeather(d) {
     document.getElementById('description').innerHTML = d.weather[0].description;
     document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
     document.getElementById('location').innerHTML = d.name;
-    document.getElementById('todaysWeather').innerHTML = d.weather[0].main;
+    document.getElementById('todaysWeather').src = get_icon_url(d.weather[0].main.toLowerCase());
+    document.getElementById('humidity').innerHTML = 'Humidity is ' + d.main.humidity + '&#37;';
+    document.getElementById('windspeed').innerHTML = 'Wind Speed is ' + d.wind.speed + ' mph';
 
 }
