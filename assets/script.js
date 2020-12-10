@@ -43,7 +43,7 @@ function getFiveDay(city) {
             forecast.slice(0, 5).forEach((day, index) => {
                 $(".forecast").append(`<div class="card mb-3" style="max-width: 10rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Day ${index + 1}</h5>
+                    <h5 class="card-title"></h5>
                     <img src=${get_icon_url(day.weather[0].main.toLowerCase())} height="100">
                     <p style="text-transform: capitalize;">${day.weather[0].description}</p>
                     <p class="card-text">Temp: ${~~day.temp.day} F</p>
@@ -120,3 +120,20 @@ function drawWeather(d) {
     document.getElementById('windspeed').innerHTML = 'Wind Speed is ' + d.wind.speed + ' mph';
 
 }
+
+var today = moment().format("hh:mm A [ on ] dddd, MMMM Do, YYYY");
+console.log(today)
+
+$("#today").append(today);
+
+var day1 = moment().add(1, 'days').calendar();
+var day2 = moment().add(2, 'days').calendar();
+var day3 = moment().add(3, 'days').calendar();
+var day4 = moment().add(4, 'days').calendar();
+var day5 = moment().add(5, 'days').calendar();
+
+$("#day1").append(day1);
+$("#day2").append(day2);
+$("#day3").append(day3);
+$("#day4").append(day4);
+$("#day5").append(day5);

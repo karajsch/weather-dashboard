@@ -84,3 +84,9 @@ h2 {
 #description {
     text-transform: capitalize;
 }
+
+#location {
+    font-size: 24px;
+    font-style: none;
+    font-weight: bold;
+}
